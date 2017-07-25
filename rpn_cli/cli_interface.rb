@@ -1,16 +1,20 @@
-module RpnCli
-  class CliInterface < RpnCli::Interface
+require_relative 'interface.rb'
+require 'colorize'
 
-    def parse_input
-      gets.chomp.strip
-    end
+class CliInterface < Interface
+  def prompt
+    print '> '
+  end
 
-    def display(content)
-      puts content.colorize(content_color)
-    end
+  def parse_input
+    input = gets.chomp.strip
+  end
 
-    def error(message)
-      puts 'Error: #{message}'.colorize(error_color)
-    end
+  def display(content)
+    print content.colorize(content_color) + "\n"
+  end
+
+  def error(message)
+    print "Error: #{message}".colorize(error_color) + "\n"
   end
 end
