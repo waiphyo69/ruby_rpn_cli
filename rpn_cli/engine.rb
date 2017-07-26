@@ -1,19 +1,20 @@
+require 'byebug'
 class Engine
   WELCOME_MESSAGE = 'Welcome to basic RPN calculator'
   HELP_MESSAGE = <<-eos
   CHOOSE any number or any of four basic arithmic operators and PRESS enter
-
   PRESS
     'q' to quit
     'h' to view help
-    's' to view current operand stack**
-    'r' to clear out the stack
+    's' to view current operand stack
+    'r' to clear out and reset the stack
   **
   - Operand stack is a set of numbers you have put in
     that have not been evaluated
   - Operand stack needs to have at least two numbers
     before putting an operator in
   eos
+
   SHUTDOWN_MESSAGE = "Shutting down"
 
   def initialize(calculator, interface)
@@ -22,8 +23,7 @@ class Engine
   end
 
   def start
-    interface.display(WELCOME_MESSAGE)
-    interface.display(HELP_MESSAGE)
+    interface.display(WELCOME_MESSAGE + "\n" + HELP_MESSAGE)
     loop do
       begin
         trap_ctrl_c

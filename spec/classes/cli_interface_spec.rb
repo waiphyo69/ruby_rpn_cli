@@ -27,7 +27,7 @@ describe CliInterface  do
     end
 
     it 'properly takes a standard input and chomps it' do
-      expect(@cli_interface.parse_input).to eq "Some input"
+      expect(@cli_interface.parse_input).to eq 'Some input'
     end
   end
 
