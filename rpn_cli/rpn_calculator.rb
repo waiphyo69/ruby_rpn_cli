@@ -2,7 +2,6 @@ class RpnCalculator
 
   ALLOWED_OPERATOR = /^(\+|-|\*|\/)$/
   ALLOWED_OPERAND = /(^[+-]?(?:0|[1-9]\d*)(?:\.(?:\d*[1-9]|0))?)$/
-  MAX_INPUT_COUNT = 50
   INSUFFICIENT_OPERAND_ERROR = 'Operand stack has less than two numbers. Please enter a number instead'
   INVALID_INPUT_FORMAT_ERROR = 'Invalid input detected. Please enter a number or an operator'
 
@@ -20,7 +19,7 @@ class RpnCalculator
     else
       raise INVALID_INPUT_FORMAT_ERROR
     end
-    operand_stack.last.to_f
+    operand_stack.last
   end
 
   private
@@ -38,6 +37,6 @@ class RpnCalculator
 
   def eval_last_two_operands(operator)
     operands = operand_stack.pop(2)
-    operand_stack.push(operands[0].send(operator, operands[1].to_f))
+    operand_stack.push(operands[0].send(operator, operands[1]))
   end
 end

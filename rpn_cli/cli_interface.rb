@@ -2,12 +2,15 @@ require_relative 'interface.rb'
 require 'colorize'
 
 class CliInterface < Interface
+
+  INITIAL_PROMPT = '> '
+
   def prompt
-    print '> '
+    print INITIAL_PROMPT
   end
 
   def parse_input
-    input = gets.chomp.strip
+    input = $stdin.gets.chomp.strip
   end
 
   def display(content)
