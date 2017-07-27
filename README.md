@@ -20,9 +20,11 @@ Tests can be run with this command
 ```
 rspec spec
 ```
-##Technical Documentation
 
-###Architecture
+## Technical Documentation
+
+
+### Architecture
 
 The implementation uses Object Oriented Approach by having distinct instantiable classes
 serving distinct purposes.
@@ -34,7 +36,7 @@ a loop which is only broken by exit commands, and raised errors are properly dis
 play.rb is a ruby executable file that instantiates an engine with a cli interface with blue content color and red error color, a calculator, and run it automatically.
 
 
-###Trade-offs
+### Trade-offs
 
 Having a color-customizable interface resulted in ugly encoded strings, and verbose tests.
 Heavily-regex based validation in calculator class calls for implementing more complicated regex
