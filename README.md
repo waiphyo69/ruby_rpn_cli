@@ -3,8 +3,11 @@
 ## About
 
 This is an implementation of command-Line based Reverse Polish Nation Calculator in ruby.
+
 Floats, integers and four basic arithmetic operators are allowed to enter one at a time.
+
 Press h for help, r for resetting stack, s for displaying stack, q or Ctrl+C to quit.
+
 To run the calculator, cd into ruby_rpn_cli folder and install required gems first.
 
 ```
@@ -56,8 +59,10 @@ with aruba/rspec in play_spec.rb, and did not have a class test for itself.
 
 ## Todo
 
-Have calculator class also be able to accept composite RPN strings such as '1 2 3 + -'
+Have calculator class also be able to accept composite RPN format strings such as '1 2 3 + -'
+
+DRY the integration test code a bit better
 
 Find a better CLI integration test flow
 
-Implement more interfaces
+Implement more interface classes
