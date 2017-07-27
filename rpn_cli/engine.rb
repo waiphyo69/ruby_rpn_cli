@@ -1,4 +1,3 @@
-require 'byebug'
 class Engine
   WELCOME_MESSAGE = 'Welcome to basic RPN calculator'
   HELP_MESSAGE = <<-eos

@@ -2,7 +2,7 @@
 
 ## About
 
-This is an implementation of command-Line based Reverse Polish Nation Calculator in ruby.
+This is an implementation of command-line based Reverse Polish Nation Calculator in ruby.
 
 Floats, integers and four basic arithmetic operators are allowed to enter one at a time.
 
